@@ -1,0 +1,12 @@
+{
+  "name": "zora-network-subgraph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.31.0"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.53.0"
+  }
+}

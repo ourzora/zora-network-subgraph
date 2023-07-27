@@ -1,0 +1,36 @@
+type PassedMessage @entity {
+  id: ID!
+
+  nonce: BigInt!
+  sender: Bytes!
+  target: Bytes!
+  value: BigInt!
+  gasLimit: BigInt!
+  data: Bytes!
+  withdrawalHash: Bytes!
+
+  withdrawalRequest: InitiatedWithdraw
+
+  blockTimestamp: BigInt!
+  blockNumber: BigInt!
+  eventTransactionHash: Bytes!
+  eventTransactionIndex: BigInt!
+}
+
+type InitiatedWithdraw @entity {
+  id: ID!
+
+  l1Token: Bytes!
+  l2Token: Bytes!
+  from: Bytes!
+  to: Bytes!
+  amount: BigInt!
+  extraData: Bytes!
+
+  messagePassed: PassedMessage
+
+  blockTimestamp: BigInt!
+  blockNumber: BigInt!
+  eventTransactionHash: Bytes!
+  eventTransactionIndex: BigInt!
+}
