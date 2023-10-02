@@ -4,10 +4,10 @@ schema:
 dataSources:
   - kind: ethereum
     name: L2ToL1Messenger
-    network: zora-mainnet
+    network: zora-testnet
     source:
       abi: L2ToL1Messenger
-      address: '0x4200000000000000000000000000000000000016'
+      address: "0x4200000000000000000000000000000000000016"
       startBlock: 0
     mapping:
       kind: ethereum/events
@@ -19,14 +19,17 @@ dataSources:
         - name: L2ToL1Messenger
           file: ./abis/L2ToL1MessagePasser.json
       eventHandlers:
-        - event: MessagePassed(indexed uint256,indexed address,indexed address,uint256,uint256,bytes,bytes32)
+        - event: MessagePassed(indexed uint256,indexed address,indexed
+            address,uint256,uint256,bytes,bytes32)
           handler: handleMessagePassed
       file: ./src/l2tol1messenger.ts
   - kind: ethereum
-    name: Token
-    network: zora-mainnet
+    name: L2StandardBridge
+    network: zora-testnet
     source:
       abi: L2StandardBridge
+      address: "0x4200000000000000000000000000000000000010"
+      startBlock: 0
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -37,6 +40,7 @@ dataSources:
         - name: L2StandardBridge
           file: ./abis/L2StandardBridge.json
       eventHandlers:
-        - event: WithdrawalInitiated(indexed address,indexed address,indexed address,address,uint256,bytes)
+        - event: WithdrawalInitiated(indexed address,indexed address,indexed
+            address,address,uint256,bytes)
           handler: handleWithdrawInitiated
       file: ./src/withdrawInitiated.ts
