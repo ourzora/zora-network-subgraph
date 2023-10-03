@@ -1,6 +1,16 @@
 {
   "zora-mainnet": {
-    "L2Bridge": {
+    "L2StandardBridge": {
+      "address": "0x4200000000000000000000000000000000000010",
+      "startBlock": 0
+    },
+    "L2ToL1Messenger": {
+      "address": "0x4200000000000000000000000000000000000016",
+      "startBlock": 0
+    }
+  },
+  "zora-testnet": {
+    "L2StandardBridge": {
       "address": "0x4200000000000000000000000000000000000010",
       "startBlock": 0
     },
