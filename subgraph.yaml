@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: L2ToL1Messenger
-    network: zora-testnet
+    network: zora-sepolia
     source:
       abi: L2ToL1Messenger
       address: "0x4200000000000000000000000000000000000016"
@@ -26,6 +26,8 @@ dataSources:
   - kind: ethereum
     name: L2StandardBridge
     network: zora-testnet
+    name: L2Bridge
+    network: zora-sepolia
     source:
       abi: L2StandardBridge
       address: "0x4200000000000000000000000000000000000010"
