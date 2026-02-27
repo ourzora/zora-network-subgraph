@@ -3,6 +3,7 @@
 l1 - messages sent and received [wip]
 l2 - withdraws
 
-Commands to run and deploy: 
+This subgraph is deprecated and no longer deployed.
+
+Commands to build:
 - `yarn run graph codegen && yarn run graph build --network zora-testnet`
-- `goldsky subgraph deploy zora-bridge-[network]/[version]`
